@@ -1,0 +1,28 @@
+.metadata/
+
+### Build ###
+target/
+build/
+
+### Spring Boot local config ###
+application-local.properties
+.env
+
+### IDE ###
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.sts4-cache
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+
+### Maven wrapper ###
+.mvn/wrapper/maven-wrapper.jar
+
+### Logs ###
+*.log
