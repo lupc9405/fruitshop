@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>fruit_shop</title>
-<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="/css/shop.css">
 </head>
 <body>
 	<h1>fruit_shop</h1>
 
 	<div class="shop-layout">
-	
+
 		<!-- 左: 商品列表 -->
 		<section class="product-list">
 			<h2>商品列表</h2>
@@ -21,13 +21,7 @@
 						<th>單位</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr th:each="p : ${products}">
-						<td th:text="${p.name}"></td>
-						<td th:text="${p.price}"></td>
-						<td th:text="${p.unitName}"></td>
-					</tr>
-				</tbody>
+				<tbody id="productTableBody"></tbody>
 			</table>
 		</section>
 
@@ -35,32 +29,19 @@
 		<section class="order-form">
 			<h2>下單</h2>
 
-			<form th:action="@{/order/submit}" method="post">
+			<div class="form-group">
+				<label for="customerName">姓名：</label>
+				<input id="customerName" type="text" required>
+			</div>
 
-				<div class="form-group">
-					<label for="customerName">姓名：</label> <input id="customerName"
-						name="customerName" type="text" required>
-				</div>
+			<div id="productInputs"></div>
 
-				<div class="form-group">
-					<label for="appleQty">蘋果：</label> <input id="appleQty"
-						name="appleQty" type="number" min="0" max="10" value="0">
-				</div>
-
-				<div class="form-group">
-					<label for="bananaQty">香蕉：</label> <input id="bananaQty"
-						name="bananaQty" type="number" min="0" max="10" value="0">
-				</div>
-
-				<div class="form-group">
-					<label for="watermelonQty">西瓜：</label> <input id="watermelonQty"
-						name="watermelonQty" type="number" min="0" max="10" value="0">
-				</div>
-
-				<button type="submit">送出訂單</button>
-			</form>
+			<button onclick="submitOrder()">送出訂單</button>
 		</section>
 	</div>
 
+
+
+	<script src="/js/shop.js"></script>
 </body>
 </html>

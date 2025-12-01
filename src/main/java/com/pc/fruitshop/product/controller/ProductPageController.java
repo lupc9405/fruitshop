@@ -22,7 +22,7 @@ public class ProductPageController {
 
 	private final ProductService productService;
 
-	// 建構子注入, ProductServiceImpl 注入
+	// 建構子注入 ProductService
 	public ProductPageController(ProductService productService) {
 		this.productService = productService;
 	}
@@ -41,7 +41,7 @@ public class ProductPageController {
 		// 加入 model 供前端使用
 		model.addAttribute("products", products);
 
-		// 回傳模板名稱（templates/shop.html）
+		// 回傳templates/shop.html
 		return "shop"; // 對應 templates/shop.html
 	}
 }

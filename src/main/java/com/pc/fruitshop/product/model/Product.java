@@ -17,7 +17,6 @@ public class Product {
     @Column(nullable = false, length = 50)
     private String name;
 
-
 	// 單價
     @Column(nullable = false)
     private Integer price;

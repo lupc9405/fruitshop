@@ -1,6 +1,7 @@
 package com.pc.fruitshop.order.service;
 
-import com.pc.fruitshop.order.dto.OrderResult;
+import com.pc.fruitshop.order.dto.OrderRequest;
+import com.pc.fruitshop.order.dto.OrderResponse;
 
 /*
  * [ OrderService ]
@@ -10,15 +11,7 @@ import com.pc.fruitshop.order.dto.OrderResult;
 
 public interface OrderService {
 
-    // 數量正規化
-    int normalizeQty(Integer qty);
-
-    // 處理整筆訂單 (含庫存檢查+扣庫存+計算金額)
-    OrderResult processOrder(
-            String customerName,
-            int appleQty,
-            int bananaQty,
-            int watermelonQty
-    );
-
+    // ==========  Q3.3 的 API + 寫入資料庫版 ========== 
+    OrderResponse processOrder(OrderRequest request);
+    
 }

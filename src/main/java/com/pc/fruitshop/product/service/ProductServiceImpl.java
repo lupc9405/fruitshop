@@ -35,4 +35,17 @@ public class ProductServiceImpl implements ProductService {
 	public Product findByName(String name) {
 		return productRepository.findByName(name);
 	}
+	
+	// 依商品編號查詢商品
+	@Override
+	public Product findById(Long id) {
+	    Product product = productRepository.findById(id).orElse(null);
+
+	    if (product == null) {
+	        throw new IllegalArgumentException("找不到商品 ID: " + id);
+	    }
+
+	    return product;
+	}
+
 }

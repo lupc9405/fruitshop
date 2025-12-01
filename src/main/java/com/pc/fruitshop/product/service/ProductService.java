@@ -7,7 +7,6 @@ import com.pc.fruitshop.product.model.Product;
 /*
  * [ ProductService ]
  * 負責描述 商品的商業邏輯規格
- * Controller 透過此介面取得商品資料
  * 
  * */
 
@@ -18,5 +17,8 @@ public interface ProductService {
 
 	// 依名稱查詢單一商品
 	Product findByName(String name);
+	
+	// 依商品編號查詢商品
+	Product findById(Long id);
 
 }

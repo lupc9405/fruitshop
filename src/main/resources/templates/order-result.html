@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>fruit_shop : 訂單結果</title>
-<link rel="stylesheet" href="order.css">
+<link rel="stylesheet" href="/css/order.css">
 </head>
 <body>
 
-	<h1 th:text="${result.success} ? '下單成功' : '下單失敗'"
-		th:classappend="${result.success} ? 'success' : 'fail'"></h1>
-
-	<p th:utext="${result.message}"></p>
+	<h1 id="title"></h1>
+	<p id="message"></p>
 
 	<a href="/shop" class="back-link">回商品列表</a>
 
+
+
+	<script src="/js/order-result.js"></script>
 </body>
 </html>
