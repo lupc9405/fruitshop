@@ -20,5 +20,9 @@ public interface ProductService {
 	
 	// 依商品編號查詢商品
 	Product findById(Long id);
+	
+	Product save(Product product);
+	
+	void deleteById(Long id);
 
 }
