@@ -6,17 +6,13 @@
 <link rel="stylesheet" href="order.css">
 </head>
 <body>
-	<h1>訂單結果</h1>
 
-	<p class="summary">
-		<span th:text="${customerName}">顧客</span> 你好，
-		您總共購買 
-		蘋果 <span th:text="${appleQty}">0</span> 顆、
-		香蕉 <span th:text="${bananaQty}">0</span> 條、
-		西瓜 <span th:text="${watermelonQty}">0</span> 片，
-		總計 <span th:text="${totalAmount}">0</span> 元。
-	</p>
+	<h1 th:text="${result.success} ? '下單成功' : '下單失敗'"
+		th:classappend="${result.success} ? 'success' : 'fail'"></h1>
 
-	<a class="back-link" th:href="@{/shop}">返回上一頁</a>
+	<p th:utext="${result.message}"></p>
+
+	<a href="/shop" class="back-link">回商品列表</a>
+
 </body>
 </html>

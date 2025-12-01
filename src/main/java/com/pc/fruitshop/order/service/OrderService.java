@@ -1,27 +1,24 @@
 package com.pc.fruitshop.order.service;
 
-import org.springframework.stereotype.Service;
+import com.pc.fruitshop.order.dto.OrderResult;
 
-@Service
-public class OrderService {
+/*
+ * [ OrderService ]
+ * 負責描述 訂單相關的商業邏輯規格
+ * 
+ * */
 
-	// 單價
-	private static final int APPLE_PRICE = 10;
-	private static final int BANANA_PRICE = 12;
-	private static final int WATERMELON_PRICE = 20;
+public interface OrderService {
 
-	// 計算總金額
-	public int calculateTotal(int appleQty, int bananaQty, int watermelonQty) {
-		return (appleQty * APPLE_PRICE) 
-				+ (bananaQty * BANANA_PRICE) 
-				+ (watermelonQty * WATERMELON_PRICE);
-	}
-	
-	// 數量 0~10
-	public int normalizeQty(Integer qty) {
-        if (qty == null || qty < 0) return 0;
-        if (qty > 10) return 10;
-        return qty;
-    }
+    // 數量正規化
+    int normalizeQty(Integer qty);
+
+    // 處理整筆訂單 (含庫存檢查+扣庫存+計算金額)
+    OrderResult processOrder(
+            String customerName,
+            int appleQty,
+            int bananaQty,
+            int watermelonQty
+    );
 
 }

@@ -17,16 +17,22 @@ import com.pc.fruitshop.product.repository.ProductRepository;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    private final ProductRepository productRepository;
+	private final ProductRepository productRepository;
 
-    // 建構子注入, productRepository 注入
-    public ProductServiceImpl(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+	// 建構子注入 productRepository
+	public ProductServiceImpl(ProductRepository productRepository) {
+		this.productRepository = productRepository;
+	}
 
-    // 取得所有商品資料
-    @Override
-    public List<Product> findAll() {
-        return productRepository.findAll();
-    }
+	// 回傳全部商品列表
+	@Override
+	public List<Product> findAll() {
+		return productRepository.findAll();
+	}
+
+	// 依名稱回傳對應商品
+	@Override
+	public Product findByName(String name) {
+		return productRepository.findByName(name);
+	}
 }
