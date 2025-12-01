@@ -15,12 +15,6 @@ public class OrderPageController {
 	@Autowired
 	private OrderService orderService;
 
-	// shop入口
-	@GetMapping("/shop")
-	public String showShopPage() {
-		return "shop"; // 對應 templates/shop.html
-	}
-
 	// 下單頁面
 	@GetMapping("/order")
 	public String showOrderForm() {
