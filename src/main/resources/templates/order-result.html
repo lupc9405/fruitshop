@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fruit_shop : 訂單結果</title>
+<link rel="stylesheet" href="order.css">
+</head>
+<body>
+	<h1>訂單結果</h1>
+
+	<p class="summary">
+		<span th:text="${customerName}">顧客</span> 你好，
+		您總共購買 
+		蘋果 <span th:text="${appleQty}">0</span> 顆、
+		香蕉 <span th:text="${bananaQty}">0</span> 條、
+		西瓜 <span th:text="${watermelonQty}">0</span> 片，
+		總計 <span th:text="${totalAmount}">0</span> 元。
+	</p>
+
+	<a class="back-link" th:href="@{/order}">返回上一頁</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 140px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    width: 180px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.summary {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
