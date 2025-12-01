@@ -1,0 +1,103 @@
+/* 整體頁面 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #fafafa;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+/* 左右布局 */
+.shop-layout {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* ===== 左側商品列表 ===== */
+.product-list {
+    flex: 1;
+}
+
+.product-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Table 調整 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* ===== 右側下單表單 ===== */
+.order-form {
+    flex: 1;
+}
+
+.order-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* 表單項目 */
+.form-group {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Label */
+label {
+    width: 80px;
+    font-size: 16px;
+}
+
+/* 輸入欄位 */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 送出按鈕 */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    background-color: #0077a8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f82;
+}

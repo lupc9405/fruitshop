@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fruit_shop</title>
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+	<h1>fruit_shop</h1>
+
+	<div class="shop-layout">
+		<!-- 左: 商品列表 -->
+		<section class="product-list">
+        <h2>商品列表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>商品名稱</th>
+                    <th>單價(元)</th>
+                    <th>單位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>蘋果</td>
+                    <td>10</td>
+                    <td>顆</td>
+                </tr>
+                <tr>
+                    <td>香蕉</td>
+                    <td>12</td>
+                    <td>條</td>
+                </tr>
+                <tr>
+                    <td>西瓜</td>
+                    <td>20</td>
+                    <td>片</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+		<!-- 右: 下單表單 -->
+		<section class="order-form">
+        <h2>下單</h2>
+
+        <form th:action="@{/order/submit}" method="post">
+
+            <div class="form-group">
+                <label for="customerName">姓名：</label>
+                <input id="customerName" name="customerName" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="appleQty">蘋果：</label>
+                <input id="appleQty" name="appleQty" type="number" min="0" max="10" value="0">
+            </div>
+
+            <div class="form-group">
+                <label for="bananaQty">香蕉：</label>
+                <input id="bananaQty" name="bananaQty" type="number" min="0" max="10" value="0">
+            </div>
+
+            <div class="form-group">
+                <label for="watermelonQty">西瓜：</label>
+                <input id="watermelonQty" name="watermelonQty" type="number" min="0" max="10" value="0">
+            </div>
+
+            <button type="submit">送出訂單</button>
+        </form>
+    </section>
+	</div>
+
+</body>
+</html>

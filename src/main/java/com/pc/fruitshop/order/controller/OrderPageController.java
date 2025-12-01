@@ -13,7 +13,13 @@ public class OrderPageController {
 	private static final int APPLE_PRICE = 10;
 	private static final int BANANA_PRICE = 12;
 	private static final int WATERMELON_PRICE = 20;
-	
+
+	// shop入口
+	@GetMapping("/shop")
+	public String showShopPage() {
+		return "shop"; // 對應 templates/shop.html
+	}
+
 	// 下單頁面
 	@GetMapping("/order")
 	public String showOrderForm() {
@@ -49,18 +55,18 @@ public class OrderPageController {
 
 		return "order-result"; // 對應 templates/order-result.html
 	}
-	
+
 	// 數量 0~10
-    private Integer normalizeQuantity(Integer qty) {
-        if (qty == null) {
-            return 0;
-        }
-        if (qty < 0) {
-            return 0;
-        }
-        if (qty > 10) {
-            return 10;
-        }
-        return qty;
-    }
+	private Integer normalizeQuantity(Integer qty) {
+		if (qty == null) {
+			return 0;
+		}
+		if (qty < 0) {
+			return 0;
+		}
+		if (qty > 10) {
+			return 10;
+		}
+		return qty;
+	}
 }
