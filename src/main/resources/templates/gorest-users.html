@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GoREST 使用者列表</title>
+<style>
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #bbb;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">GoREST 使用者列表</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>名稱</th>
+            <th>Email</th>
+            <th>性別</th>
+            <th>狀態</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr th:each="u : ${users}">
+            <td th:text="${u.id}"></td>
+            <td th:text="${u.name}"></td>
+            <td th:text="${u.email}"></td>
+            <td th:text="${u.gender}"></td>
+            <td th:text="${u.status}"></td>
+        </tr>
+    </tbody>
+</table>
+</html>
